@@ -9,6 +9,7 @@ Time spent: **10** hours spent in total
 The following **required** user stories are complete:
 
 - [x] User can scroll through a feed of images returned from the Tumblr API (5pts)
+- [ x] User can tab an image to view a larger image in a detail view (5pts)
 
 The following **stretch** user stories are implemented:
 
@@ -30,7 +31,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://i.imgur.com/GRGCMg9.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://i.imgur.com/Q0OiInm.gif' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
