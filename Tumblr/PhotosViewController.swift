@@ -78,11 +78,33 @@ class PhotosViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! PhotoDetailsViewController
+        
         let cell = sender as! UITableViewCell
-        let indexPath = tableView.indexPath(for: cell)!
-        vc.posts = posts
-        tableView.deselectRow(at: indexPath, animated: true)
+        
+        if let indexPath = tableView.indexPath(for: cell)
+        {
+            let post = posts[indexPath.row]
+            
+            var photos = post ["photos"] as! [[String: Any]]
+            
+            let photo = photos[0]
+            
+            let originalsize = photo["original_size"] as! [String: Any]
+            
+            let urlString = originalsize["url"] as! String
+            
+            let url = URL(string: urlString)
+            
+            let vc = segue.destination as! PhotoDetailsViewController
+
+            
+            vc.url = url
+            tableView.deselectRow(at: indexPath, animated: true)
+            // photos.photoView.af_setImage(withURL: url!)
+            
+            
+        }
+       
         
     }
     
